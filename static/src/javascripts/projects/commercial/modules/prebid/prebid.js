@@ -14,6 +14,9 @@ import {
     sonobiBidder,
     trustXBidder,
 } from 'commercial/modules/prebid/bidder-config';
+import {
+    priceGranularity,
+} from 'commercial/modules/prebid/price-config';
 import type {
     PrebidAdSlotCriteria,
     PrebidBid,
@@ -156,7 +159,7 @@ class PrebidService {
             },
         };
         window.pbjs.setConfig({
-            priceGranularity: 'auto',
+            priceGranularity: priceGranularity,
         });
     }
 
